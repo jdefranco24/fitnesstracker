@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'fitness_tracker',
+    process.env.MONGODB_URI || 'mongodb://localhost/fitness_tracker',
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -18,7 +18,7 @@ mongoose.connect(
     }
   );
 
-  
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
